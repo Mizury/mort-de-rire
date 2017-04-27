@@ -15,15 +15,19 @@ function roll() {
         if (globalItems.indexOf(randomObj.Id) >= 0 ) {
             alert("Item already exists in inventory")
         } else if (globalItems.indexOf(randomObj.Id) >= 99 ){
-            alert("EOF")
+            alert("Inventory Full")
         } else {
         randomObj.name = commonNames[Math.floor(Math.random() * commonNames.length)];
-        randomObj.strength = strengthRoll[Math.floor(Math.random() * strengthRoll.length)];
-        randomObj.weightRoll = weightRoll[Math.floor(Math.random() * weightRoll.length)];
-        randomObj.buyRoll = buyRoll[Math.floor(Math.random() * buyRoll.length)];
-        randomObj.sellRoll = sellRoll[Math.floor(Math.random() * sellRoll.length)]; 
+        randomObj.strength = performRoll(strengthRoll);
+        randomObj.weightRoll = performRoll(weightRoll);
+        randomObj.buyRoll = performRoll(buyRoll);
+        randomObj.sellRoll = performRoll(sellRoll); 
     }
     globalItems.push(randomObj);
+ }
+
+ function performRoll(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
  }
 
 
@@ -36,3 +40,4 @@ function random() {
 var randomObj = Math.random().toString(36).slice(2)
 
 
+console.log(JSON.stringify(globalItems,true,2))
