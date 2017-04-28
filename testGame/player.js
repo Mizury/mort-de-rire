@@ -1,3 +1,4 @@
+// starting design for player object
 var player = {
 	name: {
         firstName: '',

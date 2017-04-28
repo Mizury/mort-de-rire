@@ -1,3 +1,6 @@
+// haven't touched this in awhile need to tidy up - 4/8/17
+
+
 //inventory
 var inventory = []
 
