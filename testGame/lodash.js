@@ -3,6 +3,6 @@ _.slice(array, [starting index number], [ending index number]); //the ending num
 _.filter(array, {objects});//similar to find
 _.find(array, {objects}); //could be good search tools for items, objects is like {sell: 2, type: 'weapon'}
 
-_.flatten(array); //have to use this after the push from splice as it's two arrays deep.
+_.flatten(array); //have to use this after the push from slice as it's two arrays deep.
 
 _.orderBy(array, ['name', 'buy'], ['asc', 'desc']); // imo better way to sort. 

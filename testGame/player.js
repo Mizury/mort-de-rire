@@ -20,5 +20,6 @@ var player = {
         weight: '',
         gold: '',
         defense: ''
-    }
+    },
+    items: []
 }
